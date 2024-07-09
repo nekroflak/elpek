@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-book - Żywienie pracwoników</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://i.ibb.co/C2vFJJ1/background.jpg') center/cover fixed no-repeat;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Przezroczysty overlay */
+        }
+        .title {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            font-size: 2.5em; /* Powiększenie rozmiaru tytułu */
+            z-index: 1; /* Aby tytuł był na wierzchu */
+        }
+        .container, .text-container {
+            background-color: rgba(255, 255, 255, 0.9); /* Tło kontenerów z tekstem i formularzem */
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 90%; /* Szerokość kontenerów jako 90% szerokości ekranu */
+            max-width: 800px; /* Maksymalna szerokość kontenerów */
+            margin: 10px;
+            z-index: 1; /* Aby kontenery były na wierzchu */
+        }
+        .text-container {
+            background-color: rgba(255, 255, 255, 0.95); /* Nowe tło dla kontenera z tekstem */
+        }
+        form {
+            background-color: rgba(240, 240, 240, 0.95); /* Nowe tło dla kontenera z formularzem */
+        }
+        .text-container h3 {
+            color: #ff7e5f;
+        }
+        .text-container ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        form input, form button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form button {
+            background-color: #ff7e5f;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #feb47b;
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1200px;
+            position: relative; /* Aby overlay obejmował całą zawartość */
+            z-index: 1; /* Aby zawartość była na wierzchu */
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <h1 class="title">Zdrowe żywienie pracowników - klucz do sukcesu firmy</h1>
+    <div class="content">
+        <div class="text-container">
+            <h3>Zdrowe Żywienie Pracowników</h3>
+            <p>Zwiększ produktywność, zadowolenie i zaangażowanie pracowników dzięki zdrowemu żywieniu!</p>
+            <h4>Korzyści:</h4>
+            <ul>
+                <li>Lepsza efektywność i koncentracja</li>
+                <li>Redukcja absencji i poprawa samopoczucia</li>
+                <li>Wyższe morale i zaangażowanie</li>
+            </ul>
+            <h4>Co znajdziesz w ebooku?</h4>
+            <ul>
+                <li>Praktyczne porady żywieniowe</li>
+                <li>Przepisy na zdrowe posiłki</li>
+                <li>Plany działania dla firm</li>
+            </ul>
+            <h4>Pobierz nasz ebook już dziś!</h4>
+            <p>Zadbaj o zdrowie swojego zespołu, a oni zadbają o sukces Twojej firmy! <strong>Pobierz teraz!</strong></p>
+        </div>
+        <div class="container">
+            <h2>Sprawdź e-booka</h2>
+            <form id="contactForm" action="send_email.php" method="POST">
+                <input type="text" name="firstName" placeholder="Imię" required>
+                <input type="text" name="lastName" placeholder="Nazwisko" required>
+                <input type="email" name="email" placeholder="Adres email" required>
+                <button type="submit">Pobierz</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
